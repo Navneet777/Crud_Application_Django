@@ -3,15 +3,23 @@
 {{category_detail.name}}
 {% endblock %}
 {% block content %}
-    <div class="container">
-        <div class="row justify-content-md-center pt-5">
-        <div class="col-md-8">
-          <div class="col-12"><h1>{{category_detail.name}}</h1></div>
-            <br/>
-            <br/>
-          <div class="col-12"><p>{{category_detail.type}}</p></div>
-          <div class="col-12"><p>{{category_detail.published}}</p></div>
+<div class="container">
+  <div class="row justify-content-md-center pt-5">
+    <div class="col-md-8  d-flex justify-content-md-center">
+      <div class="info bg-info p-5">
+        <div class="col-12">
+          <h3>{{category_detail.name}}</h3>
         </div>
+
+        <div class="col-12">
+          <p>Type : {{category_detail.type}}</p>
+        </div>
+        <div class="col-12">
+          <p>published : {{category_detail.published}}</p>
         </div>
       </div>
+
+    </div>
+  </div>
+</div>
 {% endblock %}
