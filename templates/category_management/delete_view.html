@@ -5,7 +5,7 @@
 <div class="container pt-5">
     <form method="post" novalidate>
         {% csrf_token %}
-        <p>Are you sure you want to delete post "{{ object.title }}"?</p>
+        <p>Are you sure you want to delete post "{{ object.name }}"?</p>
         <input type="submit" value="confirm">
     </form>
 </div>
