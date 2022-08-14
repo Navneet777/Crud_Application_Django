@@ -35,4 +35,4 @@ class DeleteCategoryView(DeleteView):
     model = Category
     pk_url_kwarg = 'pk'
     template_name = 'category_management/delete_view.html'
-    success_url = '/category_management/manage_post_list'
+    success_url = '/category_management'
