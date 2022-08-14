@@ -2,11 +2,6 @@ from django.shortcuts import render
 from django.views.generic import ListView,DetailView,CreateView,UpdateView,DeleteView
 from .models import Category
 from .forms import CategoryForm
-
-# Create your views here.
-
-def add(request):
-    return render(request,"base.html")
 class CategoryView(ListView):
     model = Category
     queryset = Category.objects.all()
