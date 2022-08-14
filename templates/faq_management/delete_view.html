@@ -2,18 +2,17 @@
 
 {% block content %}
 
-<div class="container pt-5" >
+<div class="container pt-5">
     <div class="row justify-content-md-center">
         <div class="col-md-10 p-5" style="background: rgba(205, 222, 226, 0.37); ">
             <form method="post" novalidate>
                 {% csrf_token %}
-                <p>Are you sure you want to delete post <b>"{{ object.name }}"</b> ?</p>
+                <p>Are you sure you want to delete post <b>"{{ object.title }}"</b> ?</p>
                 <input class="btn btn-danger" type="submit" value="confirm">
-                <a class="btn btn-secondary bg-info" href="{% url 'category_list' %}" role="button">Cancle</a>
+                <a class="btn btn-secondary bg-info" href="{% url 'faq_list' %}" role="button">Cancle</a>
             </form>
         </div>
     </div>
-    
 </div>
 
 {% endblock %}
