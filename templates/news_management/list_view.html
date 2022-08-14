@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+<div>
+  <a class="btn btn-secondary bg-info" href="{% url 'add_news' %}" role="button">Add News</a>
+</div>
+<div class="album py-5">
+  <div class="container">
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      {% if object_list %}
+      {% for each in news_list %}
+      <div class="col-md-4 mb-3">
+        <div class="card bg-light">
+          <div class="card-body">
+            <img class="rounded-circle" src={{each.image}} alt="Generic placeholder image" width="140" height="140">
+            <h5 class="card-title text-dark">{{each.title}}</h5>
+            <h6 class="card-subtitle mb-2 text-dark">{{each.short_description}}</h6>
+            <p class="text-muted">{{each.description}}</p>
+            <p class="text-muted">{{each.status}}</p>
+            <p><a class="btn btn-dark" href="{% url 'news_detail_view' each.id %}" role="button">View details
+                &raquo;</a></p>
+            <div class="btn-group d-flex justify-content-between align-items-center">
+              <a class="btn btn-sm btn-outline-secondary bg-info text-white" href="{% url 'edit_news' each.id %}"
+                role="button">Edit</a>
+              <a class="btn btn-sm btn-outline-secondary bg-danger text-white" href="{% url 'delete_news' each.id %}" role="button">Delete</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+      {% else %}
+      No Post Found
+      {% endif %}
+
+    </div><!-- /.row -->
+  </div>
+  {% endblock %}

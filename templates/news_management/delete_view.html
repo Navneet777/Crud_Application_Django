@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container pt-5">
+    <div class="row justify-content-md-center">
+        <div class="col-md-10 bg-info p-5">
+            <form method="post" novalidate>
+                {% csrf_token %}
+                <p>Are you sure you want to delete post <b>"{{ object.title }}"</b> ?</p>
+                <input class="btn btn-danger" type="submit" value="confirm">
+                <a class="btn btn-secondary bg-info" href="{% url 'news_list' %}" role="button">Cancle</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
