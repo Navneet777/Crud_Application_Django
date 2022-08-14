@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+<div>
+  <a class="btn btn-secondary" href="{% url 'add_category' %}" role="button">Add Category</a>
+</div>
+  <div class="album py-5">
+    <div class="container">
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        {% if object_list %}
+          {% for each in category_list %}
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">{{each.name}}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">{{each.type}}</h6>
+              <p>{{each.published}}</p>
+              <p><a class="btn btn-secondary" href="{% url 'category_detail_view' each.id %}" role="button">View details &raquo;</a></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a class="btn btn-sm btn-outline-secondary" href="{% url 'edit_category' each.id %}" role="button">Edit</a>
+                  <a class="btn btn-sm btn-outline-secondary" href="#" role="button">Delete</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        {% else %}
+            No Post Found
+        {% endif %}
+      </div>
+    </div><!-- /.row -->
+  </div>
+{% endblock %}
