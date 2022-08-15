@@ -3,22 +3,19 @@
 {{category_detail.name}}
 {% endblock %}
 {% block content %}
-<div class="container">
-  <div class="row justify-content-md-center pt-5">
-    <div class="col-md-10 d-flex justify-content-md-start" style="border: 1px solid black;">
-      <div class="info  p-5">
-        <div class="col-12">
-          <h3 class="text-dark">{{category_detail.name}}</h3>
-        </div>
+<div class="container pt-5 pb-5" style="background: rgba(205, 222, 226, 0.37); ">
+  <div class="row justify-content-md-center">
+    <div class="col-md-10 d-flex justify-content-md-start">
 
-        <div class="col-12">
-          <p> <span class="">Category Type :</span> {{category_detail.type}}</p>
+      <div class="card w-100">
+        <div class="card-body">
+          <h5 class="card-title">{{category_detail.name}}</h5>
         </div>
-        <div class="col-12">
-          <p>Published : {{category_detail.published}}</p>
-        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item bg-info text-white"><b class=" p-2">Short Description :</b> {{category_detail.type}}</li>
+          <li class="list-group-item bg-warning text-dark"><b class=" p-2">Description :</b> {{category_detail.published}}</li>
+        </ul>
       </div>
-
     </div>
   </div>
 </div>

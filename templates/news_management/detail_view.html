@@ -3,45 +3,28 @@
 {{news_detail.title}}
 {% endblock %}
 {% block content %}
-<div class="container">
+<div class="container pb-5" style="background: rgba(205, 222, 226, 0.37); ">
   <div class="row justify-content-md-center pt-5">
-    <div class="col-md-10 d-flex justify-content-md-start" style="border: 1px solid black;">
-      <div class="info  p-5">
-        <div class="col-12">
-          <h3 class="text-dark">{{news_detail.title}}</h3>
-        </div>
-        <div class="col-12">
-          <p> <span class=""></span> {{news_detail.short_description}}</p>
-        </div>
-        <div class="col-12">
-          <p> <span class=""></span> {{news_detail.description}}</p>
-        </div>
-        <div class="col-12">
-          <p>{{news_detail.status}}</p>
-        </div>
-        <div class="col-12">
-          <p>{{news_detail.meta_title}}</p>
-        </div>
-        <div class="col-12">
-          <p>{{news_detail.meta_description}}</p>
-        </div>
-        <div class="col-12">
-          <p>{{news_detail.meta_keyword}}</p>
-        </div>
-        <div class="col-12">
-          <p>{{news_detail.og_title}}</p>
-        </div>
-        <div class="col-12">
-          <p>{{news_detail.og_description}}</p>
-        </div>
-        <div class="col-12">
-          <p>{{news_detail.og_url}}</p>
-        </div>
-        <div class="col-12">
-          <p>{{news_detail.canonical_url}}</p>
-        </div>
-      </div>
+    <div class="col-md-10 d-flex justify-content-md-start">
 
+      <div class="card w-100">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{news_detail.title}}</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item bg-info text-white"><b class=" p-2">Short Description :</b> {{news_detail.short_description}}</li>
+          <li class="list-group-item bg-warning text-dark"><b class=" p-2">Description :</b> {{news_detail.description}}</li>
+          <li class="list-group-item bg-info text-white"><b class=" p-2">Status :</b> {{news_detail.status}}</li>
+          <li class="list-group-item bg-warning text-dark"><b class=" p-2">Meta Description :</b>  {{news_detail.meta_title}}</li>
+          <li class="list-group-item bg-info text-white"><b class=" p-2">Meta Description :</b>  {{news_detail.meta_description}}</li>
+          <li class="list-group-item bg-warning text-dark"><b class=" p-2">Meta Keyword :</b> {{news_detail.meta_keyword}}</li>
+          <li class="list-group-item bg-info text-white"><b class=" p-2">Og Title :</b> {{news_detail.og_title}}</li>
+          <li class="list-group-item bg-warning text-dark"><b class=" p-2">Og Description :</b> {{news_detail.og_description}}</li>
+          <li class="list-group-item bg-info text-white"><b class=" p-2">Og URL :</b> {{news_detail.og_url}}</li>
+          <li class="list-group-item bg-warning text-dark"><b class=" p-2">Canonical URL :</b> {{news_detail.canonical_url}}</li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
