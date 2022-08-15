@@ -17,17 +17,17 @@ class AddCategoryView(CreateView):
     model = Category
     form_class = CategoryForm
     template_name = 'category_management/add_category.html'
-    success_url = '/category_management'
+    success_url = '/'
 
 class EditCategoryView(UpdateView):
     model = Category
     form_class = CategoryForm
     pk_url_kwarg = 'pk'
     template_name = 'category_management/edit_category.html'
-    success_url = '/category_management'
+    success_url = '/'
 
 class DeleteCategoryView(DeleteView):
     model = Category
     pk_url_kwarg = 'pk'
     template_name = 'category_management/delete_view.html'
-    success_url = '/category_management'
+    success_url = '/'
