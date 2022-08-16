@@ -14,7 +14,7 @@
       <div class="col-md-4 mb-3">
         <div class="card bg-light">
           <div class="card-body">
-            <img class="rounded-circle" src={{each.image.url}} alt="Generic placeholder image" width="140" height="140">
+            <img class="rounded-circle" src="{{ MEDIA_URL }}{{each.image.url}}" alt="{{each.image.url}}" width="140" height="140">
             <h5 class="card-title text-dark">{{each.title}}</h5>
             <h6 class="card-subtitle mb-2 text-dark">{{each.short_description}}</h6>
             <p class="text-muted">{{each.description}}</p>
