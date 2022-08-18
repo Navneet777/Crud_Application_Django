@@ -9,10 +9,9 @@ CHOICES = (
         ('FAQ', 'Faq'),
         ('LEGAL TERMS', 'Legal Terms'),
     )
-PUBLISHED_CHOICES = (
-        ('Yes', 'Yes'),
-        ('No', 'No'),
-        )
+
+published_options = ((True, 'Yes'), (False, 'No'))
+
 class Category(models.Model):
     class Meta:
         db_table = 'category'
@@ -20,7 +19,7 @@ class Category(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=150)
     type = models.CharField(max_length=300, choices = CHOICES)
-    published = models.CharField(max_length=300, choices = PUBLISHED_CHOICES)
+    published = models.BooleanField(max_length=300, choices = published_options)
 
     def __str__(self):
         return self.name

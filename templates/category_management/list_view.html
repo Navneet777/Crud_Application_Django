@@ -16,7 +16,7 @@
           <div class="card-body">
             <h5 class="card-title text-dark">{{each.name}}</h5>
             <h6 class="card-subtitle mb-2 text-dark">{{each.type}}</h6>
-            <p class="text-muted">{{each.published}}</p>
+            <p class="text-muted">Published: {{each.published}}</p>
             <p><a class="btn btn-dark" href="{% url 'category_detail_view' each.id %}" role="button">View details
                 &raquo;</a></p>
             <div class="btn-group d-flex justify-content-between align-items-center">
@@ -30,7 +30,7 @@
       </div>
       {% endfor %}
       {% else %}
-      No Post Found
+      No Category Found
       {% endif %}
 
     </div><!-- /.row -->
