@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render ,redirect, reverse
+from django.contrib.auth.models import User , auth
+from django.contrib import messages
 
-# Create your views here.
+from django.contrib.auth.views import LoginView    
+
+class AdminLogin(LoginView):
+    template_name = 'authentication/Login_View_form.html'

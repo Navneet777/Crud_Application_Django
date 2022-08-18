@@ -1,8 +1,10 @@
 from django.urls import path
-from .views import *
+from .views import AdminLogin
 
 urlpatterns = [
-    # path('', BlogView.as_view(), name="blog_list"),
+    path('', AdminLogin.as_view(), name="login")
     ]
+
+
 
 
